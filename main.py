@@ -1,6 +1,6 @@
 import os
 from os import abort
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from flask import Flask, render_template, redirect, url_for, flash, request
 from flask_bootstrap import Bootstrap
 from flask_ckeditor import CKEditor
@@ -14,7 +14,7 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommmentForm
 from flask_gravatar import Gravatar
 from functools import wraps
 
-load_dotenv()
+# load_dotenv()
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY")
 ckeditor = CKEditor(app)
